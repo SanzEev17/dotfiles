@@ -13,7 +13,8 @@ nvimtree.setup {
   filters = {
     dotfiles = false,
     custom = {
-      "node_modules/.*",
+      "node_modules",
+      ".git$",
     },
   },
 

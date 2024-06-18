@@ -1,0 +1,107 @@
+* {
+  min-height: 18px;
+  border: none;
+  border-radius: 0;
+  font-family: "CaskaydiaCove Nerd Font";
+  font-size: 14px;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#workspaces,
+#clock,
+#utilities,
+#wireplumber,
+#hardware,
+#battery,
+#custom-weather,
+#custom-power {
+  padding: 0px 10px;
+  margin: 0px 5px;
+  border-radius: 15px;
+}
+
+#workspaces {
+  transition: none;
+  color: #363a4f;
+  background: #24283b;
+}
+
+#workspaces button {
+  color: #c0caf5;
+  background-color: #24283b;
+}
+
+#workspaces button.active {
+  color: #9ece6a;
+}
+
+#workspaces button:hover {
+  color: #9ece6a;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+#custom-weather {
+  color: #7aa2f7;
+  background: #24283b;
+}
+
+#clock {
+  transition: none;
+  color: #161320;
+  background: #bb9af7;
+}
+
+#utilities {
+  color: #161320;
+  background: #c0caf5;
+}
+#network {
+  padding: 0px 8px 0 0;
+}
+#bluetooth {
+  padding: 0px 8px;
+}
+#backlight {
+  padding: 0px 0px 0px 5px;
+}
+
+#hardware {
+  background: #7dcfff;
+  color: #161320;
+}
+
+#wireplumber {
+  color: #161320;
+  background: #7aa2f7;
+}
+
+#battery {
+  color: #15161e;
+  background: #9ece6a;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: #161320;
+  background-color: #9ece6a;
+}
+
+#battery.critical:not(.charging) {
+  background-color: #ff757f;
+  color: #161320;
+}
+
+#custom-power {
+  color: #161320;
+  background: #ff757f;
+  padding: 0px 15px 0px 10px;
+}

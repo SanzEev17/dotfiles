@@ -1,55 +1,57 @@
-// -*- mode: jsonc -*-
 {
   "layer": "top",
   "margin": "10 10 0 10",
-  "modules-left": ["hyprland/workspaces","custom/weather"],
-  "modules-center": [ "clock"],
+  "modules-left": ["hyprland/workspaces", "custom/weather"],
+  "modules-center": ["clock"],
   "modules-right": [
     "group/utilities",
     "group/hardware",
     "wireplumber",
-    "battery", 
+    "battery",
     "custom/power",
   ],
 
-    // Modules configuration
-    "hyprland/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "warp-on-scroll": false,
-        "format": "{icon}",
-        "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
-            "urgent": "",
-            "focused": "",
-            "default": ""
-        }
+  // Modules configuration
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
     },
-    
-    "custom/weather": {
-      "format": "{}",
-      "interval": 3600,
-      "return-type": "json",
-      "exec": "sh $HOME/.config/waybar/scripts/weather.sh",
+    "format": "{icon}",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "urgent": "",
+      "focused": "",
+      "default": "",
     },
-"clock": {
+  },
+
+  "custom/weather": {
+    "format": "{}",
+    "interval": 3600,
+    "return-type": "json",
+    "exec": "sh $HOME/.config/waybar/scripts/weather.sh",
+  },
+  "clock": {
     "tooltip": true,
     "interval": 60,
     "format": "{:%b %d, %I:%M %p}",
     "tooltip-format": "{:%A, %d %B, %Y}",
   },
 
-"group/utilities":{
+  "group/utilities": {
     "orientation": "horizontal",
-    "modules": [
-      "network",
-      "bluetooth",
-      "backlight"
-    ]
+    "modules": ["network", "bluetooth", "backlight"],
   },
 
   "network": {
@@ -72,17 +74,17 @@
     "interval": 30,
     "tooltip-format": "{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}   {device_address}",
-    "on-click": "blueman-manager"
+    "on-click": "blueman-manager",
   },
 
   "backlight": {
     "tooltip": false,
     "device": "intel_backlight",
     "format": "{icon} {percent}%",
-    "format-icons": ["", "", "", "", "", "", "", "", ""]
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
   },
 
-"group/hardware": {
+  "group/hardware": {
     "orientation": "horizontal",
     "modules": ["memory", "temperature", "cpu"],
   },
@@ -96,7 +98,7 @@
     // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "critical-threshold": 80,
     "format": "{temperatureC}°C {icon} ",
-    "format-icons": ["", "", ""]
+    "format-icons": ["", "", ""],
   },
   "cpu": {
     "interval": 10,
@@ -104,7 +106,7 @@
     "max-length": 10,
   },
 
-"wireplumber": {
+  "wireplumber": {
     "tooltip": false,
     "scroll-step": 0.5,
     "format": "{icon} {volume}%",
@@ -125,7 +127,7 @@
     "format-alt": "{time} {icon}",
     "format-icons": ["", "", "", "", ""],
   },
-"custom/power": {
+  "custom/power": {
     "format": "",
     "on-click": "wlogout",
   },

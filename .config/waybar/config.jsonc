@@ -129,6 +129,6 @@
   },
   "custom/power": {
     "format": "",
-    "on-click": "wlogout",
+    "on-click": "sh ~/.config/rofi/scripts/power_menu.sh",
   },
 }

@@ -1,0 +1,64 @@
+configuration {
+  font: "CaskaydiaCove Nerd Font 14";
+  drun-display-format: "{name}";
+  hover-select: true;
+  me-select-entry: "";
+  me-accept-entry: "MousePrimary";
+}
+
+@theme "~/.config/rofi/theme.rasi"
+
+element-text, element-icon , mode-switcher {
+  background-color: inherit;
+  text-color: inherit;
+}
+
+window {
+  width: 500px;
+  height: 500px;
+  border: 2px;
+  border-radius: 15px;
+  border-color: @border;
+  background-color: @bg;
+}
+
+mainbox {
+  padding: 20px 30px;
+  background-color: @bg;
+}
+
+listbox {
+  children:
+    [ "inputbar", "listview"];
+  background-color: @bg;
+}
+
+inputbar {
+  children: [prompt];
+  background-color: @bg;
+  border-radius: 6px;
+  padding: 12px;
+  spacing: 15px;
+}
+prompt {
+  background-color: @bg;
+  text-color: @select-fg;
+}
+
+listview {
+  padding: 10px 0px 0px 0px;
+  background-color: @bg;
+}
+
+element {
+  padding: 20px 5px;
+  spacing: 10px;
+  background-color: @bg;
+  text-color: @fg;
+}
+
+element selected {
+  background-color: @select-bg;
+  text-color: @bg;
+  border-radius: 10px;
+}

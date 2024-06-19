@@ -1,0 +1,10 @@
+* {
+  bg: #24283b;
+  fg: #cad3f5;
+  select-bg: #bb9af7;
+  select-fg: #7aa2f7;
+  border: #bb9af7;
+  placeholder: #c0caf5;
+  active: #9ece6a;
+  urgent: #ed8796;
+}

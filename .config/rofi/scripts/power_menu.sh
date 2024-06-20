@@ -21,7 +21,7 @@ case $selected_option in
         systemctl hibernate
         ;;
     *Lock)
-        hyprctl dispatch lock
+        hyprlock
         ;;
     *)
         ;;

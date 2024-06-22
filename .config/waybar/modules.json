@@ -8,32 +8,27 @@
     "orientation": "horizontal",
     "modules": ["memory", "temperature", "cpu"]
   },
+  "group/links": {
+    "orientation": "horizontal",
+    "modules": ["custom/chatgpt", "custom/gmail", "custom/movie"]
+  },
 
   // Modules Configuration
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
+    "active-only": false,
     "warp-on-scroll": false,
-    "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": []
-    },
+    "on-click": "activate",
     "format": "{icon}",
     "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
-      "urgent": "",
-      "focused": "",
-      "default": ""
+      "active": "",
+      "default": ""
+    },
+    "persistent-workspaces": {
+      "*": 3
     }
   },
-
   "clock": {
     "tooltip": true,
     "interval": 60,
@@ -112,6 +107,21 @@
   },
 
   // Custom Modules
+  "custom/chatgpt": {
+    "format": "󰭹  ",
+    "tooltip-format": "Chatgpt",
+    "on-click": "google-chrome-stable --app=https://chatgpt.com/"
+  },
+  "custom/gmail": {
+    "format": "󰊫  ",
+    "tooltip-format": "Gmail",
+    "on-click": "chromium --app=https://gmail.com/"
+  },
+  "custom/movie": {
+    "format": "󰎁 ",
+    "tooltip-format": "Movie",
+    "on-click": "brave --app=https://hdtoday.cc/home/"
+  },
   "custom/weather": {
     "format": "{}",
     "interval": 3600,

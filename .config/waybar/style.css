@@ -16,6 +16,7 @@ window#waybar.hidden {
 
 #workspaces,
 #clock,
+#links,
 #utilities,
 #wireplumber,
 #hardware,
@@ -39,11 +40,11 @@ window#waybar.hidden {
 }
 
 #workspaces button.active {
-  color: #9ece6a;
+  color: #7aa2f7;
 }
 
 #workspaces button:hover {
-  color: #9ece6a;
+  color: #7aa2f7;
   background: none;
   border: none;
   box-shadow: none;
@@ -52,6 +53,17 @@ window#waybar.hidden {
 #custom-weather {
   color: #7aa2f7;
   background: #24283b;
+}
+
+#links {
+  color: #7aa2f7;
+  background: #24283b;
+}
+
+#custom-chatgpt,
+#custom-gmail,
+#custom-movie {
+  font-size: 16px;
 }
 
 #clock {

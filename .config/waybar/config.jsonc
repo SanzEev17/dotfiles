@@ -6,7 +6,7 @@
   "include": ["$HOME/.config/waybar/modules.json"],
 
   // Modules position
-  "modules-left": ["hyprland/workspaces", "custom/weather"],
+  "modules-left": ["hyprland/workspaces", "custom/weather", "group/links"],
   "modules-center": ["clock"],
   "modules-right": [
     "group/utilities",

@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+iPATH="$HOME/.config/mako/icons/picture.png"
+
 # Path to the wallpaper
 WALLPAPER_PATH=$1
 
@@ -15,13 +17,13 @@ SQUARE_WALLPAPER=$OUTPUT_DIR/square_wallpaper.png
 [ -f "$SQUARE_WALLPAPER" ] && rm "$SQUARE_WALLPAPER"
 
 # Send notification about blurring start
-notify-send "Wallpaper Processor" "Blurring the wallpaper..."
+notify-send -i "$iPATH" "Wallpaper Processor" "Blurring the wallpaper..."
 
 # Create blurred version
 convert "$WALLPAPER_PATH" -blur 0x12 "$BLURRED_IMAGE"
 
 # Send notification about cropping start
-notify-send "Wallpaper Processor" "Cropping the wallpaper..."
+notify-send -i "$iPATH" "Wallpaper Processor" "Cropping the wallpaper..."
 
 # Create cropped 1:1 version
 convert "$WALLPAPER_PATH" -gravity center -crop 1:1 "$SQUARE_WALLPAPER"
@@ -30,5 +32,5 @@ convert "$WALLPAPER_PATH" -gravity center -crop 1:1 "$SQUARE_WALLPAPER"
 convert "$SQUARE_WALLPAPER" -resize 256x256 "$SQUARE_WALLPAPER"
 
 # Send notification about completion
-notify-send "Wallpaper Processor" "Processing completed. Images saved to $OUTPUT_DIR"
+notify-send -i "$iPATH" "Wallpaper Processor" "Processing completed. Images saved."
 

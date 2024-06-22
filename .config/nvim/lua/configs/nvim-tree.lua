@@ -14,7 +14,7 @@ nvimtree.setup {
     dotfiles = false,
     custom = {
       "node_modules",
-      ".git$",
+      "^.git$",
     },
   },
 

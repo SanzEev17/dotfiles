@@ -45,15 +45,9 @@ window#waybar.hidden {
   padding: 0px 15px 0px 10px;
 }
 
-#workspaces {
-  color: #363a4f;
-  background: #24283b;
-}
-
 #workspaces button {
   padding: 0px 6px;
-  color: #c8d3f5;
-  background-color: #24283b;
+  color: #86e1fc;
 }
 
 #workspaces button.active {

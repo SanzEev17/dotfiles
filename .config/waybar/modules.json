@@ -1,0 +1,135 @@
+{
+  // Module Groups
+  "group/utilities": {
+    "orientation": "horizontal",
+    "modules": ["network", "bluetooth"]
+  },
+  "group/hardware": {
+    "orientation": "horizontal",
+    "modules": ["memory", "cpu"]
+  },
+
+  // Modules Configuration
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "active-only": false,
+    "warp-on-scroll": false,
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "十"
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+
+  "cpu": {
+    "interval": 15,
+    "format": " {}%",
+    "max-length": 10
+  },
+  "memory": {
+    "interval": 30,
+    "format": " {used:0.1f}G ",
+    "max-length": 10
+  },
+
+  "clock": {
+    "tooltip": true,
+    "interval": 60,
+    "format": "{:%a, %b %d, %I:%M %p}"
+  },
+
+  "network": {
+    "interval": 2,
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰈁 {ipaddr}",
+    "format-disconnected": "󰤭",
+    "on-click": "nm-connection-editor",
+    "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
+    "tooltip-format": " {ifname} via {gwaddri}",
+    "tooltip-format-wifi": "  {ifname}: {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+    "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+    "tooltip-format-disconnected": "Disconnected"
+  },
+
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂲",
+    "format-connected": " {num_connections}",
+    "interval": 30,
+    "tooltip-format": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}   {device_address}",
+    "on-click": "blueman-manager"
+  },
+
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "reverse-scrolling": 1,
+    "format": "{icon} {volume}% {format_source}",
+    "format-bluetooth": "{icon} {volume}% {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": "  {format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": " ",
+    "format-icons": {
+      "headphone": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [" ", " ", " "]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  "backlight": {
+    "tooltip": false,
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
+  },
+
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon}  {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-icons": ["", "", "", "", ""]
+  },
+
+  // Custom Modules
+  "custom/os": {
+    "format": ""
+    "tooltip": false
+  },
+  "custom/weather": {
+    "format": "{}",
+    "interval": 3600,
+    "return-type": "json",
+    "exec": "sh $HOME/.config/waybar/scripts/weather.sh"
+  },
+
+  "custom/power": {
+    "format": "",
+    "on-click": "wlogout"
+    "tooltip": false
+  }
+}

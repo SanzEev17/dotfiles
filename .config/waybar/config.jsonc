@@ -1,0 +1,25 @@
+{
+  "layer": "top",
+  "margin": "10 10 0 10",
+
+  // Load Modules
+  "include": ["$HOME/.config/waybar/modules.json"],
+
+  // Modules position
+  "modules-left": [
+    "custom/os",
+    "hyprland/workspaces",
+    "group/hardware"
+  ],
+  "modules-center": [
+    "clock",
+    "custom/weather"
+  ],
+  "modules-right": [
+    "group/utilities",
+    "pulseaudio",
+    "backlight",
+    "battery",
+    "custom/power"
+  ]
+}

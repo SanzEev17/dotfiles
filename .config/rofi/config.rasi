@@ -1,0 +1,76 @@
+configuration {
+  modi: "drun";
+  font: "CaskaydiaCove Nerd Font 14";
+  show-icons: true;
+  icon-theme: "Colloid-dracula-dark";
+  drun-display-format: "{name}";
+  display-drun: "❯";
+  me-select-entry: "MousePrimary";
+  me-accept-entry: "MouseDPrimary";
+}
+
+@theme "~/.config/rofi/theme.rasi"
+
+element-text, element-icon , mode-switcher {
+  background-color: inherit;
+  text-color: inherit;
+}
+
+window {
+  height: 500px;
+  border: 2px;
+  border-radius: 15px;
+  border-color: @border;
+  background-color: @background;
+}
+
+mainbox {
+  padding: 20px 30px;
+  background-color: @background;
+}
+
+listbox {
+  children:
+    [ "inputbar",
+    "listview"];
+  background-color: @background;
+}
+
+inputbar {
+  children: [prompt, entry];
+  background-color: @background;
+  border-radius: 6px;
+  padding: 12px;
+  spacing: 15px;
+}
+prompt {
+  background-color: @background;
+  text-color: @selection-text;
+}
+entry {
+  text-color: @foreground;
+  background-color: @background;
+}
+
+listview {
+  padding: 10px 0px 0px 0px;
+  columns: 2;
+  background-color: @background;
+}
+
+element {
+  padding: 15px;
+  spacing: 10px;
+  background-color: @background;
+  text-color: @foreground;
+}
+
+element-icon {
+  size: 25px;
+}
+
+element selected {
+  background-color: @selection;
+  text-color: @selection-text;
+  border-radius: 10px;
+}

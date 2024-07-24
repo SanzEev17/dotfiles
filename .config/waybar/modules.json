@@ -118,7 +118,8 @@
   // Custom Modules
   "custom/os": {
     "format": "",
-    "tooltip": false
+    "tooltip": false,
+    "on-click": "rofi -show drun"
   },
   "custom/weather": {
     "format": "{}",

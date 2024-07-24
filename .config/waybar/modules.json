@@ -117,19 +117,19 @@
 
   // Custom Modules
   "custom/os": {
-    "format": ""
+    "format": "",
     "tooltip": false
   },
   "custom/weather": {
     "format": "{}",
     "interval": 3600,
     "return-type": "json",
-    "exec": "sh $HOME/.config/waybar/scripts/weather.sh"
+    "exec": "python $HOME/.config/waybar/scripts/weather.py"
   },
 
   "custom/power": {
     "format": "",
-    "on-click": "wlogout"
+    "on-click": "wlogout",
     "tooltip": false
   }
 }

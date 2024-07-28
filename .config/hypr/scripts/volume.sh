@@ -46,9 +46,9 @@ dec_volume() {
 # Toggle Mute
 toggle_mute() {
 	if [ "$muted" == "[MUTED]" ]; then
-    wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low "$ICON_VOLUME_HIGH Volume Unmuted"
+    wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "$iDIR/volume-high.png" "Volume Unmuted"
 	else
-    wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low "$ICON_VOLUME_MUTE Volume Muted"
+    wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "$iDIR/volume-mute.png" "Volume Muted"
 	fi
 }
 
